@@ -1,0 +1,35 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # classpath:表示在resources下的路径；mybatis配置文件所在路径
+  type-aliases-package: com.yangli.springcloud.entities    # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+
+spring:
+   application:
+    name: microservicecloud-dept                           #这个名字是对外暴露的微服务的名字，很重要
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://127.0.0.1:3306/clouddb01              # 数据库名称
+    username: root
+    password: 123123
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+eureka:
+  client:           #表示eureka的客户端，将会注册进eureka服务列表内
+    service-url:
+      defaultZone: http://localhost:7001/eureka    #与eureka服务端配置的地址一致，表示将要入驻到的地址。
+  instance:
+    instance-id: microservicecloud-dept   #对外暴露的微服务访问地址名
+    prefer-ip-address: true    #悬停在微服务名称上可以显示ip地址
+info:
+  app.name: microservicecloud    #项目名
+  company.name: www.yangli.com   #公司名
+  build.artifactId: $project.artifactId$   #微服务名，动态获取
+  build.version: $project.version$     #版本号，动态获取
