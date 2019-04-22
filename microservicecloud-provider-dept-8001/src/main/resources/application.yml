@@ -31,5 +31,5 @@ eureka:
 info:
   app.name: microservicecloud    #项目名
   company.name: www.yangli.com   #公司名
-  build.artifactId: $project.artifactId$   #微服务名，动态获取
-  build.version: $project.version$     #版本号，动态获取
+  build.artifactId: "@project.artifactId@"   #微服务名，动态获取
+  build.version: "@project.version@"     #版本号，动态获取
