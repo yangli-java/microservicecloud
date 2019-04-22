@@ -24,7 +24,7 @@ spring:
 eureka:
   client:           #表示eureka的客户端，将会注册进eureka服务列表内
     service-url:
-      defaultZone: http://localhost:7001/eureka    #与eureka服务端配置的地址一致，表示将要入驻到的地址。
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/    #与eureka服务端配置的地址一致，表示将要入驻到的地址。
   instance:
     instance-id: microservicecloud-dept   #对外暴露的微服务访问地址名
     prefer-ip-address: true    #悬停在微服务名称上可以显示ip地址
