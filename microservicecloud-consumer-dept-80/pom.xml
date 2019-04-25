@@ -20,7 +20,7 @@
         </dependency>
         <!-- Ribbon相关 -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
+            <groupId>org.springframework.cloud</groupId><!-- 表示是eureka的客户端，或者叫提供端 -->
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <dependency>
