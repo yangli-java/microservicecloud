@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ConfigBean {
     @Bean
-    @LoadBalanced
+    @LoadBalanced   //开启自动负载均衡，即可以通过微服务名称进行调用微服务，不需要使用ip+端口号进行调用了。
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
