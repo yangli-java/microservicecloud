@@ -32,8 +32,8 @@ public class ConfigBean {
      */
     @Bean
     public IRule getIRule() {
-//        return  new RoundRobinRule();//简单轮询负载均衡，若没有配置该Bean，则Ribbon默认采取该种方式的负载均衡
-        return new RandomRule();//随机负载均衡
+        return  new RoundRobinRule();//简单轮询负载均衡，若没有配置该Bean，则Ribbon默认采取该种方式的负载均衡
+//        return new RandomRule();//随机负载均衡
 //        return new RetryRule();//重试轮询负载均衡
     }
 }
