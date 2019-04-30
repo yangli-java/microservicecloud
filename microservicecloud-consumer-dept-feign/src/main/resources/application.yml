@@ -1,0 +1,11 @@
+server:
+  port: 80
+
+#providerUrl: 'http://localhost:8001'
+providerUrl: 'http://microservicecloud-dept'     #可以根据微服务名称访问微服务，不再需要ip地址和端口号，提高安全性
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/    #与eureka服务端配置的地址一致，表示将要入驻到的地址。
