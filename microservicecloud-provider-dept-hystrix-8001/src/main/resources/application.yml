@@ -27,7 +27,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/    #与eureka服务端配置的地址一致，表示将要入驻到的地址。
   instance:
-    instance-id:  ${spring.cloud.client.ipAddress}:${server.port}    #microservicecloud-dept8001   #对外暴露的微服务访问地址名
+    instance-id: microservicecloud-dept8001-hystrix     #microservicecloud-dept8001   #对外暴露的微服务访问地址名
     prefer-ip-address: true    #悬停在微服务名称上可以显示ip地址
 info:
   app.name: microservicecloud    #项目名
