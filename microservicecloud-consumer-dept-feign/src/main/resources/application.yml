@@ -4,6 +4,10 @@ server:
 #providerUrl: 'http://localhost:8001'
 providerUrl: 'http://microservicecloud-dept'     #可以根据微服务名称访问微服务，不再需要ip地址和端口号，提高安全性
 
+feign:
+  hystrix:
+    enabled: true
+
 eureka:
   client:
     register-with-eureka: false
